@@ -1,1 +1,2 @@
-# D3 Project Starter Template
+# Project 1 - Health in the US
+Emily Turcotte
