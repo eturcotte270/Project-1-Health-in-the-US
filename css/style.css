@@ -1,0 +1,179 @@
+/* Header Styling */
+.header {
+    text-align: center;
+    background: rgba(108, 107, 107, 0.217);
+    text-decoration: 'underline';
+}
+
+.header h1 {
+    margin-top: 0px;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.header h2 {
+    margin-top: 0px;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+hr {
+    height: 1px;
+    border: black;
+    color: black;
+    background-color: black;
+}
+
+select {
+    margin-right: 600px;
+}
+
+/* Row Styling */
+.row {
+    text-align: center;
+}
+
+.rowSelect {
+    text-align: left;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.rowSelect::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Column Styling for Variable Selectors and Choropleth Map */
+.columnTop {
+    float: left;
+    width: 50%;
+}
+
+/* Column Styling for charts histogram/scatterplot */
+.columnChartSelectors {
+    float: left;
+    width: 20%;
+    text-align: left;
+}
+
+.columnChartMap {
+    float: left;
+    width: 40%;
+    text-align: left;
+}
+
+.columnChart {
+    float: left;
+    width: 33%;
+}
+
+/* Tooltip Styling */
+#tooltip {
+    position: absolute;
+    display: none;
+    background: #fff;
+    box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px;
+    min-width: 90px;
+    color: #333;
+}
+
+.tooltip-title {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Choropleth Map Legend Styling */
+.legend-title {
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.legend-label {
+    font-size: .7rem;
+}
+
+/* Legend Button Styling */
+.legend {
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.legend-btn {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+
+.legend-btn:hover.legend-btn.inactive:hover {
+    opacity: 0.7;
+}
+
+.legend-btn.inactive {
+    opacity: 0.5;
+}
+
+.legend-symbol {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+/* Rural Button */
+.legend-btn[status="Rural"] .legend-symbol {
+    background: #d3eecd;
+}
+
+/* Suburban Button */
+.legend-btn[status="Suburban"] .legend-symbol {
+    background: #7bc77e;
+}
+
+/* Small City Button */
+.legend-btn[status="Small City"] .legend-symbol {
+    background: #2a8d46;
+}
+
+/* Urban Button */
+.legend-btn[status="Urban"] .legend-symbol {
+    background: #174c26;
+}
+
+/* Scatterplot Axes Styling */
+.axis line {
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-size: 13px;
+    fill: #6b6b6b;
+}
+.axis-title {
+    font-size: 13px;
+    fill: #888;
+}
+.y-axis .tick:first-child line {
+    stroke: #ddd;
+}
+.x-axis .tick:first-child line {
+    stroke: #ddd;
+}
+.axis path {
+    stroke: #ddd;
+}
+
+
