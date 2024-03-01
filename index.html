@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health in the USA</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>    
+    <!-- Title -->
+    <div class = "header">
+        <hr>
+        <!-- Title -->
+        <h1>Health in the USA</h1>
+        <!-- Name -->
+        <h2>Emily Turcotte</h2>
+        <!--Health Data Source .csv file-->
+        <a href = "https://www.cdc.gov/dhdsp/maps/atlas/index.htm">
+            US Health Data .csv: The US Heart and Stroke Atlas (CDC website)
+        </a>
+        <br>
+        <!--Map Data Source .json file-->
+        <a href = "https://github.com/topojson/us-atlas">
+            US Map Data .json: U.S Census Bureau (github)
+        </a>
+        <hr>
+    </div>
+    
+    <div class = "row">
+        <div class = "columnChartSelectors">
+            <label>
+                <span>Select x variable:</span>
+                <select id = "selectButton1">
+                    <option value="none" selected disabled hidden>median_income</option> 
+                </select>
+            </label>
+
+            <label>
+                <span>Select y variable:</span>
+                <select id = "selectButton2">
+                    <option value="none" selected disabled hidden>percent_smoking</option> 
+                </select>
+            </label>
+
+            <p>Choose Urban Rural Status:</p>
+            <ul class="legend">
+                <li class="legend-btn" status="Rural"><span class="legend-symbol"></span> Rural</li> <br>
+                <li class="legend-btn" status="Suburban"><span class="legend-symbol"></span> Suburban</li> <br>
+                <li class="legend-btn" status="Small City"><span class="legend-symbol"></span> Small City</li> <br>
+                <li class="legend-btn" status="Urban"><span class="legend-symbol"></span> Urban</li>
+            </ul>
+
+            <p>Before switching variables, <br> be sure to click off of brushes <br> on the histograms</p>
+        </div>
+        <div class = "columnChartMap">
+            <div id = "mapX"></div>
+        </div>
+        <div class = "columnChartMap">
+            <div id = "mapY"></div>
+        </div>
+    </div>
+
+    <div id= "tooltip"></div>
+
+    <!-- Histograms/Scaterplot -->
+    <div class = "row">
+        <div class = "columnChart">
+            <svg id= "histogramX"></svg>
+        </div>
+        <div class = "columnChart">
+            <svg id= "scatterplot"></svg>
+        </div>
+        <div class = "columnChart">
+            <svg id= "histogramY"></svg>
+        </div>
+    </div>
+
+    <!-- D3 bundle -->
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/topojson.v3.js"></script>
+    <script src="js/choroplethX.js"></script>
+    <script src="js/choroplethY.js"></script>
+    <script src="js/scatterplot.js"></script>
+    <script src="js/histogramX.js"></script>
+    <script src="js/histogramY.js"></script>
+
+
+    <!-- Our JS code -->
+    <script src="js/main.js"></script>
+</body>
+</html>
