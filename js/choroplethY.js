@@ -130,7 +130,7 @@ class ChoroplethY {
                     `);
             })
             .on('mouseleave', () => {
-                d3.select('#tooltop').style('display', 'none');
+                d3.select('#tooltip').style('display', 'none');
             });
 
         // Add legend labels
